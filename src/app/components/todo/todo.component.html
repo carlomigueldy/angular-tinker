@@ -1,0 +1,15 @@
+<mat-list *ngFor="let item of todos">
+  <mat-list-item
+    (dblclick)="toggleStatus(item.id)">
+    <div matLine>
+      {{ item.title }}
+    </div>
+    <button 
+      matLine
+      mat-stroked-button 
+      color="primary"
+      (click)="toggleStatus(item.id)">
+      {{ item.completed ? 'Mark not done' : 'Mark done' }}
+    </button>
+  </mat-list-item>
+</mat-list>
